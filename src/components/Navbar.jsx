@@ -77,12 +77,12 @@ function Navbar() {
           </div>
           {toggleMenu && (
             <div className="absolute bottom-[-101%] left-0 min-h-full h-full w-full pt-[40px] px-4 sm:pl-[40px] bg-white lg:overflow-y-scroll border-t-2 border-seadrive">
-              <div className="w-full sm:w-1/2 flex flex-col space-y-[40px]">
+              <div className="w-full sm:w-1/2 bg-white flex flex-col space-y-[40px]">
                 <ul className="flex flex-col items-start space-y-8">
                   {navlinks.map((link, i) => (
                     <li key={i}>
                       <Link href={link.href}>
-                        <a className="capitalize text-blankstare hover:text-blue duration-300 text-[16px] leading-5 font-medium">
+                        <a className="capitalize text-blankstare hover:text-blue duration-300 text-[16px] leading-5 font-medium"  onClick={() => setToggleMenu((prv) => !prv)}>
                           {link.name}
                         </a>
                       </Link>
